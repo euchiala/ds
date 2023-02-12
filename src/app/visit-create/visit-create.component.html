@@ -1,0 +1,53 @@
+<form [formGroup]="form" (ngSubmit)="onsub()">
+    <mat-form-field appearance="fill">
+        <mat-label>temperature</mat-label>
+        <input matInput placeholder="temperature" formControlName = "temperature">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>bloodpressure</mat-label>
+        <input matInput placeholder="bloodpressure" formControlName = "bloodpressure">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>weight</mat-label>
+        <input matInput placeholder="weight" formControlName = "weight">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>hight</mat-label>
+        <input matInput placeholder="hight" formControlName = "hight">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>spo2</mat-label>
+        <input matInput placeholder="spo2" formControlName = "spo2">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>diagnostic</mat-label>
+        <input matInput placeholder="diagnostic" formControlName = "diagnostic">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Select a patient</mat-label>
+        <mat-select [(value)]="patientSelected">
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let element of patientTab" [value]="element.id">
+            {{element.firstName}} {{element.lastName}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Select a doctor</mat-label>
+        <mat-select [(value)]="doctorSelected">
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let element of doctorTab" [value]="element.id">
+            {{element.firstName}} {{element.lastName}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
+    <button type="submit">SAVE</button>
+</form>
