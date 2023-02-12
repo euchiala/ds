@@ -20,11 +20,17 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { VisitListComponent } from './visit-list/visit-list.component';
+import { PatientsListComponent } from './patients-list/patients-list.component';
+import { VisitDescriptionComponent } from './visit-description/visit-description.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VisitCreateComponent
+    VisitCreateComponent,
+    VisitListComponent,
+    PatientsListComponent,
+    VisitDescriptionComponent
   ],
   imports: [
     ReactiveFormsModule,FormsModule,
